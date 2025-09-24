@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>물리 문제 풀이</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>물리 문제 풀이</h1>
+    
+    <!-- 타이머 -->
+    <div id="timer">
+      <span>타이머: </span><span id="time">0</span> 초
+    </div>
+    
+    <!-- 문제 이미지 -->
+    <div id="problem-container">
+      <img id="problem-image" src="" alt="문제 이미지" />
+    </div>
+    
+    <!-- 답 입력 -->
+    <div>
+      <input type="text" id="answer" placeholder="답을 입력하세요" />
+    </div>
+    
+    <!-- 채점 버튼 -->
+    <button id="check-btn">채점</button>
+    
+    <!-- 정답 여부 -->
+    <div id="result"></div>
+
+    <!-- 다른 문제 버튼 -->
+    <button id="next-btn">다른 문제</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
