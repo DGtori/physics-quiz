@@ -17,50 +17,61 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 840px;  /* 1200px의 70% 크기 */
   height: auto;
-  min-height: 800px
+  min-height: 560px; /* 600px의 70% 크기 */
 }
 
+/* 문제 이미지 */
 #problem-container img {
-  max-width: 70%;
-  height: auto;
+  width: 100%;  /* 화면에 맞게 유동적으로 크기 조정 */
+  max-width: 66%;  /* 95%에서 70%로 크기 줄임 */
+  height: auto;    /* 비율을 유지한 채 높이를 자동으로 조정 */
   border-radius: 5px;
-  width: 30%
 }
 
 #timer {
-  font-size: 30px;
+  font-size: 21px; /* 30px에서 70% 크기 줄임 */
   margin-bottom: 20px;
   font-weight: bold;
 }
 
 input {
   padding: 10px;
-  font-size: 18px;
-  width: 250px;
+  font-size: 16px; /* 18px에서 70% 크기 줄임 */
+  width: 220px;
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  max-width: 100%;
 }
 
+/* 버튼들을 한 줄에 배치 */
 button {
-  padding: 12px 24px;
-  font-size: 18px;
-  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
   cursor: pointer;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
 }
 
 button:hover {
   background-color: #45a049;
+}
+
+/* 버튼들을 한 줄에 배치 (flexbox 사용) */
+#button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;  /* 버튼 사이에 간격을 줌 */
 }
 
 #result {
@@ -72,12 +83,12 @@ button:hover {
 
 /* 정답일 때 색깔 */
 .correct {
-  color: green;  /* 녹색 */
+  color: green;
 }
 
 /* 오답일 때 색깔 */
 .incorrect {
-  color: red;    /* 빨간색 */
+  color: red;
 }
 
 /* 오답 제출 시간 표시 스타일 */
@@ -87,4 +98,60 @@ button:hover {
   font-weight: bold;
   margin-top: 20px;
   text-align: center;
+}
+
+/* 모바일에서의 스타일 */
+@media screen and (max-width: 768px) {
+  #container {
+    padding: 15px;
+    min-height: 500px;
+  }
+
+  #timer {
+    font-size: 19px; /* 24px에서 70% 크기 줄임 */
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px; /* 16px에서 70% 크기 줄임 */
+  }
+
+  button {
+    width: 48%;  /* 버튼 크기를 48%로 줄여 한 줄에 두 개가 보이도록 */
+    padding: 8px 12px;
+    font-size: 12px; /* 14px에서 70% 크기 줄임 */
+  }
+
+  /* 버튼들을 한 줄에 배치 */
+  #button-container {
+    display: flex;
+    justify-content: space-between;  /* 두 버튼 사이 공간을 일정하게 */
+    gap: 10px;
+  }
+
+  #problem-container img {
+    max-width: 66%; /* 95%에서 70% 크기 줄임 */
+    width: 100%;
+  }
+}
+
+/* 작은 화면(예: 모바일)에서 더 작은 크기 설정 */
+@media screen and (max-width: 480px) {
+  #timer {
+    font-size: 18px; /* 20px에서 70% 크기 줄임 */
+  }
+
+  input {
+    font-size: 12px; /* 14px에서 70% 크기 줄임 */
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 12px;
+    width: 48%;  /* 버튼 크기를 48%로 줄여 한 줄에 두 개가 보이도록 */
+  }
+
+  #incorrectTimeDisplay {
+    font-size: 16px; /* 18px에서 70% 크기 줄임 */
+  }
 }
