@@ -19,31 +19,37 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  min-height: 800px
 }
 
 #problem-container img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 5px;
+  width: 30%
 }
 
 #timer {
-  font-size: 18px;
+  font-size: 30px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 input {
-  padding: 8px;
-  font-size: 16px;
-  width: 200px;
+  padding: 10px;
+  font-size: 18px;
+  width: 250px;
   margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 24px;
+  font-size: 18px;
   margin-top: 10px;
   cursor: pointer;
   background-color: #4CAF50;
@@ -60,5 +66,25 @@ button:hover {
 #result {
   margin-top: 15px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 정답일 때 색깔 */
+.correct {
+  color: green;  /* 녹색 */
+}
+
+/* 오답일 때 색깔 */
+.incorrect {
+  color: red;    /* 빨간색 */
+}
+
+/* 오답 제출 시간 표시 스타일 */
+#incorrectTimeDisplay {
+  font-size: 20px;
+  color: #ff5733;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
 }
