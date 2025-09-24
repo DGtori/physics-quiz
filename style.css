@@ -17,32 +17,32 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 20px; /* 여유 있는 패딩 유지 */
   text-align: center;
   width: 100%;
-  max-width: 840px;  /* 1200px의 70% 크기 */
+  max-width: 700px;  /* 1000px의 70%로 줄임 */
   height: auto;
-  min-height: 500px;
+  min-height: 450px;  /* 최소 높이도 줄여서 여유 있게 설정 */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 28px;  /* 제목 크기를 70%로 줄임 */
   margin-bottom: 20px;
 }
 
 #problem-container img {
   width: 100%;  /* 부모 컨테이너에 맞춰 크기 조정 */
-  max-width: 60%;  /* 이미지의 최대 크기를 부모의 60%로 제한 */
+  max-width: 56%;  /* 이미지의 최대 크기를 부모의 56%로 줄임 (80%의 70%) */
   height: auto;    /* 비율에 맞춰 높이 자동 조정 */
   border-radius: 5px;
   margin-bottom: 20px; /* 이미지 아래 여백 추가 */
 }
 
 #timer {
-  font-size: 21px;
+  font-size: 21px;  /* 타이머 크기 유지 */
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -50,7 +50,7 @@ h1 {
 input {
   padding: 10px;
   font-size: 16px;
-  width: 220px;
+  width: 220px;  /* 입력 필드 크기 유지 */
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -83,7 +83,7 @@ button:hover {
 #result {
   margin-top: 15px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 20px;  /* 결과 텍스트 크기 유지 */
   text-align: center;
 }
 
@@ -115,7 +115,7 @@ button:hover {
 
   input {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   button {
@@ -131,8 +131,8 @@ button:hover {
   }
 
   #problem-container img {
-    max-width: 70%;  /* 모바일에서는 70%로 크기를 줄임 */
-    width: 100%;  /* 부모 컨테이너에 맞춰 크기 조정 */
+    max-width: 56%;  /* 이미지 크기 56%로 설정 */
+    width: 100%;
   }
 }
 
@@ -142,7 +142,7 @@ button:hover {
   }
 
   input {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   button {
@@ -156,7 +156,7 @@ button:hover {
   }
 
   #problem-container img {
-    max-width: 80%;  /* 작은 화면에서 더 작은 이미지 크기 */
-    width: 100%;  /* 부모 컨테이너에 맞춰 크기 조정 */
+    max-width: 56%;  /* 작은 화면에서도 56%로 설정 */
+    width: 100%;
   }
 }
